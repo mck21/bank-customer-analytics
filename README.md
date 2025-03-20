@@ -5,14 +5,14 @@ Este proyecto realiza un análisis exploratorio de datos utilizando Python, enfo
 ## Estructura del Proyecto
 
 ```
-├── data/                   # Carpeta con los datos originales
-├── notebooks/             # Jupyter notebooks para el análisis
-├── src/                   # Código fuente Python
+├── data/                 # Carpeta con los datos originales
+├── notebooks/            # Jupyter notebooks para el análisis
+├── src/                  # Código fuente Python
 │   ├── data/             # Scripts para procesamiento de datos
 │   └── visualization/    # Scripts para visualización
 ├── results/              # Resultados del análisis
-│   ├── figures/         # Gráficos generados
-│   └── reports/         # Reportes generados
+│   ├── figures/          # Gráficos generados
+│   └── reports/          # Reportes generados
 └── requirements.txt      # Dependencias del proyecto
 ```
 
