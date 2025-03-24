@@ -1,6 +1,6 @@
 # Proyecto de Análisis Exploratorio de Datos (EDA)
 
-Este proyecto realiza un análisis exploratorio de datos utilizando Python, enfocado en el análisis de datos bancarios y detalles de clientes.
+Este proyecto realiza un análisis exploratorio de datos utilizando Python, de datos bancarios y detalles de clientes.
 
 ## Estructura del Proyecto
 
@@ -21,6 +21,10 @@ Este proyecto realiza un análisis exploratorio de datos utilizando Python, enfo
 El proyecto utiliza dos conjuntos de datos:
 1. `customer-details.xlsx`: Detalles de clientes
 2. `bank-additional.csv`: Datos bancarios adicionales
+
+## Análisis
+
+Para ver el detalle completo del análisis exploratorio de datos, incluyendo los pasos seguidos, metodología y resultados, consulta el archivo [ANALYSIS.md](ANALYSIS.md).
 
 ## Requisitos
 
