@@ -22,9 +22,8 @@ El proyecto utiliza dos conjuntos de datos:
 1. `customer-details.xlsx`: Detalles de clientes
 2. `bank-additional.csv`: Datos bancarios adicionales
 
-## Análisis
-
-Para ver el detalle completo del análisis exploratorio de datos, incluyendo los pasos seguidos, metodología y resultados, consulta el archivo [ANALYSIS.md](ANALYSIS.md).
+> [!IMPORTANT]
+> Para ver el detalle completo del análisis exploratorio de datos, incluyendo los pasos seguidos, metodología y resultados, consulta el archivo [ANALYSIS.md](ANALYSIS.md).
 
 ## Requisitos
 
@@ -43,3 +42,9 @@ Para ver el detalle completo del análisis exploratorio de datos, incluyendo los
    ```bash
    pip install -r requirements.txt
    ``` 
+
+### ¿Por qué usar un entorno virtual?
+
+El uso de un entorno virtual (`venv`) permite aislar las dependencias del proyecto, evitando conflictos con otras versiones de librerías instaladas en el sistema. Esto garantiza que el código funcione de manera consistente en diferentes entornos y facilita la instalación de dependencias específicas sin afectar otros proyectos.  
+
+Al activar el entorno virtual, cualquier paquete instalado con `pip` se almacenará dentro del directorio `venv`, en lugar de instalarse globalmente en el sistema.  
