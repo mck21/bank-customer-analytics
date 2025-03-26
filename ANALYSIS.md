@@ -1,5 +1,5 @@
-# Análisis Exploratorio de Datos - Proyecto Bancario
-[notebook](notebooks/EDA_bank_customers.ipynb)
+# Análisis Exploratorio de Datos - Proyecto Bancario. 
+[Ver análisis en el notebook](notebooks/EDA_bank_customers.ipynb)
 
 ## 1. Importación de librerías y carga de datos
 
@@ -11,7 +11,7 @@
 
 El parámetro index_col=0 indica que la primera columna del CSV se utilizará como índice del DataFrame, si no, el csv se carga de forma errónea
 
-#### Dataset de Clientes (customer-details.xlsx):
+#### Info de Clientes (customer-details.xlsx):
 - Tamaño del dataset: 20,115 filas × 7 columnas
 - Columnas disponibles:
   - Income (ingresos)
@@ -21,7 +21,7 @@ El parámetro index_col=0 indica que la primera columna del CSV se utilizará co
   - NumWebVisitsMonth (visitas web mensuales)
   - ID (identificador único)
 
-#### Datos Bancarios (bank-additional.csv):
+#### Info de Datos Bancarios (bank-additional.csv):
 - Tamaño del dataset: 43,000 filas x 23 columnas
 - Columnas disponibles:
   - age (edad)
@@ -51,7 +51,6 @@ El parámetro index_col=0 indica que la primera columna del CSV se utilizará co
 ## 2. Transformación y limpieza de los datos
 
 ### 2.1 Estandarización de nombres de columnas
-[notebook](notebooks/EDA_bank_customers.ipynb)
 
 El primer paso es la estandarización de los nombres de las columnas en ambos datasets. Esta estandarización se realiza con el objetivo de:
 - Mejorar la legibilidad y comprensión del significado de cada variable
@@ -59,16 +58,15 @@ El primer paso es la estandarización de los nombres de las columnas en ambos da
 - Facilitar la interpretación de los resultados en las fases posteriores del análisis
 
 ### 2.2 Análisis de valores nulos
-[notebook](notebooks/EDA_bank_customers.ipynb)
 
-#### Dataset de Clientes (customer-details.xlsx):
+#### Dataset de Clientes:
 - Tipos de datos:
   - 5 columnas numéricas (int64)
   - 1 columna de fecha (datetime64[ns])
   - 1 columna de texto (object - Customer_ID)
 - No hay valores nulos en ninguna columna
 
-### Datos Bancarios:
+#### Dataset de Datos Bancarios:
 - Tipos de datos:
   - 7 columnas numéricas (float64)
   - 4 columnas enteras (int64)
@@ -85,7 +83,9 @@ El primer paso es la estandarización de los nombres de las columnas en ambos da
   - Euribor_3M_Rate: 9,256 valores nulos
   - Date: 248 valores nulos
 
-
+#
+-----------------------------------------------------------------
+TODO
 -----------------------------------------------------------------
 ## 3. Limpieza de datos
 - Identificar y manejar valores nulos (.isnull().sum()).
