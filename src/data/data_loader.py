@@ -6,7 +6,7 @@ def load_customer_data():
     Carga los datos de clientes desde el archivo Excel
     """
     try:
-        df_customers = pd.read_excel('../data/customer-details.xlsx')
+        df_customers = pd.read_excel('../data/customer-details.xlsx', index_col=0)
         return df_customers
     except Exception as e:
         print(f"Error al cargar datos de clientes: {e}")

@@ -3,13 +3,14 @@
 ## 1. Carga de datos
 - Implementación de funciones de carga en [data_loader.py](src/data/data_loader.py):
   - `load_customer_data()`: Carga datos de clientes desde Excel
-  - `load_bank_data()`: Carga datos bancarios desde CSV. El parámetro index_col=0 indica que la primera columna del CSV se utilizará como índice del DataFrame, si no, el csv se carga de forma errónea
+  - `load_bank_data()`: Carga datos bancarios desde CSV. 
   - `get_basic_info()`: Obtiene información básica del DataFrame
+
+El parámetro index_col=0 indica que la primera columna del CSV se utilizará como índice del DataFrame, si no, el csv se carga de forma errónea
 
 #### Datos de Clientes (customer-details.xlsx):
 - Tamaño del dataset: 20,115 filas × 7 columnas
 - Columnas disponibles:
-  - Unnamed: 0 (índice)
   - Income (ingresos)
   - Kidhome (número de niños)
   - Teenhome (número de adolescentes)
@@ -19,8 +20,7 @@
 
 #### Datos Bancarios (bank-additional.csv):
 - Tamaño del dataset: 43,000 filas x 23 columnas
-- Estado actual: Los datos están concatenados en una sola columna con comas como separador
-- Necesita procesarse para separar en las siguientes 23 columnas:
+- Columnas disponibles:
   - age (edad)
   - job (trabajo)
   - marital (estado civil)
@@ -47,12 +47,21 @@
 
 ## 2. Análisis Inicial
 
-### Datos de Clientes:
-- No hay valores nulos en ninguna columna
+### 2.1 Estandarización de Nombres de Columnas
+
+El primer paso es la estandarización de los nombres de las columnas en ambos datasets. Esta estandarización se realiza con el objetivo de:
+- Mejorar la legibilidad y comprensión del significado de cada variable
+- Mantener consistencia en el formato con Pascal_Snake_Case
+- Facilitar la interpretación de los resultados en las fases posteriores del análisis
+
+La implementación del rename de las columnas se puede encontrar en: [rename_columnas](notebooks/EDA_bank_customers.ipynb#Rename-de-las-columnas-para-una-mejor-comprensión).
+
+#### Dataset de Clientes (customer-details.xlsx):
 - Tipos de datos:
   - 5 columnas numéricas (int64)
   - 1 columna de fecha (datetime64[ns])
   - 1 columna de texto (object - ID)
+- No hay valores nulos en ninguna columna
 - Estadísticas descriptivas:
   - Income: Media de 93,087.21, rango de 5,852 a 180,791
   - Kidhome: Media de 1.00, máximo 2
@@ -60,17 +69,30 @@
   - NumWebVisitsMonth: Media de 16.54, rango de 1 a 32
 
 ### Datos Bancarios:
-- Los datos están en formato concatenado y necesitan ser procesados
-- No hay valores nulos aparentes
-- Requiere separación de columnas para análisis detallado
+- Tipos de datos:
+  - 7 columnas numéricas (float64)
+  - 4 columnas enteras (int64)
+  - 12 columnas de texto (object)
+- Valores nulos encontrados:
+  - age: 5,120 valores nulos
+  - job: 345 valores nulos
+  - marital: 85 valores nulos
+  - education: 1,807 valores nulos
+  - default: 8,981 valores nulos
+  - housing: 1,026 valores nulos
+  - loan: 1,026 valores nulos
+  - cons.price.idx: 471 valores nulos
+  - euribor3m: 9,256 valores nulos
+  - date: 248 valores nulos
+- Estadísticas descriptivas de variables numéricas:
+  - age: Media de 39.98 años, rango de 17 a 98 años
+  - duration: Media de 257.74 segundos, rango de 0 a 4,918
+  - campaign: Media de 2.57 contactos, rango de 1 a 56
+  - previous: Media de 0.17 contactos previos, máximo 7
+  - emp.var.rate: Media de 0.08, rango de -3.4 a 1.4
+  - latitude: Media de 36.86, rango de 24.40 a 49.38
+  - longitude: Media de -95.94, rango de -125.00 a -66.94
 
-## Próximos Pasos
-1. Procesar y separar las columnas del dataset bancario
-2. Realizar análisis estadístico detallado
-3. Crear visualizaciones para entender mejor la distribución de los datos
-4. Identificar patrones y correlaciones entre variables
-5. Realizar segmentación de clientes
-6. Generar conclusiones y recomendaciones
 
 ## 3. Limpieza de datos
 - Identificar y manejar valores nulos (.isnull().sum()).
