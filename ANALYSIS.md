@@ -57,7 +57,67 @@ El primer paso es la estandarización de los nombres de las columnas en ambos da
 - Mantener consistencia en el formato con Pascal_Snake_Case
 - Facilitar la interpretación de los resultados en las fases posteriores del análisis
 
-### 2.2 Análisis de valores nulos
+De ahora en adelante, se utilizarán los siguientes nombres de columnas en el análisis:
+```python
+customer_columns_rename = {
+    'Income': 'Income',
+    'Kidhome': 'Number_of_Children',
+    'Teenhome': 'Number_of_Teenagers',
+    'Dt_Customer': 'Registration_Date',
+    'NumWebVisitsMonth': 'Monthly_Web_Visits',
+    'ID': 'Customer_ID'
+}
+
+bank_columns_rename = {
+    'age': 'Age',
+    'job': 'Job',
+    'marital': 'Marital_Status',
+    'education': 'Education_Level',
+    'default': 'Credit_Default',
+    'housing': 'Mortgage_Loan',
+    'loan': 'Personal_Loan',
+    'contact': 'Contact_Type',
+    'duration': 'Call_Duration',
+    'campaign': 'Campaign_Contacts',
+    'pdays': 'Days_Since_Last_Contact',
+    'previous': 'Previous_Contacts',
+    'poutcome': 'Previous_Campaign_Outcome',
+    'emp.var.rate': 'Employment_Variation_Rate',
+    'cons.price.idx': 'Consumer_Price_Index',
+    'cons.conf.idx': 'Consumer_Confidence_Index',
+    'euribor3m': 'Euribor_3M_Rate',
+    'nr.employed': 'Number_of_Employees',
+    'y': 'Subscribed_to_Service',
+    'date': 'Date',
+    'latitude': 'Latitude',
+    'longitude': 'Longitude',
+    'id_': 'Customer_ID'
+}
+```
+
+### 2.2 Corrección de formato y trasformación de columnas
+
+La corrección del tipado de los datos además de crear tablas a partir de las disponibles para esclarecer los datos pasa por realizar las siguientes transformaciones:
+
+En el dataset de clientes:
+
+En el dataset de datos bancarios:
+- Pasar los valores de Age de float a integer, ya que la edad no puede ser un número decimal.
+- Reemplazo de comas por puntos decimales en columnas numéricas con comas.
+- Eliminación de columnas que no aportan valor para el análisis, como default.
+- Pasar a booleanos los valores de las columnas housing y loan, en lugar de usar 1.0 y 0.0.
+- Reformatear la columna date para que tenga un formato dd/mm/yyyy.
+- Latitude y Longitude tienen algunos valores decimales y otros string, por lo que se convierten a float ambas columnas.
+- Categorizar la columna Days_Since_Last_Contact en "Contacted" y "Not contacted" dependiendo si el valor es menor de 999.
+- Categorizar la columna Call_Duration en "Very short", "Short", "Medium", "Long" y "Very long" dependiendo del valor.
+
+
+
+
+
+
+
+### 2.3 Análisis de valores nulos
 
 #### Dataset de Clientes:
 - Tipos de datos:
@@ -82,6 +142,17 @@ El primer paso es la estandarización de los nombres de las columnas en ambos da
   - Consumer_Price_Index: 471 valores nulos
   - Euribor_3M_Rate: 9,256 valores nulos
   - Date: 248 valores nulos
+
+### 2.4 Tratado de los nulos
+
+#### Estrategia para el manejo de los nulos
+
+- Variables categóricas (strings) → reemplazar por "Unknown"
+
+- Variables numéricas (floats/ints) → reemplazar por la media de la columna
+
+- Fechas nulas → reemplazar por la media de la columna
+
 
 #
 -----------------------------------------------------------------
