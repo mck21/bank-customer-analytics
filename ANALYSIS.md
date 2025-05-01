@@ -101,6 +101,8 @@ La corrección del tipado de los datos además de crear tablas a partir de las d
 
 En el dataset de clientes:
 
+- Reformatear la columna date para que tenga un formato dd/mm/yyyy. Y mantener el formato con la fecha del dataset de datos bancarios.
+
 En el dataset de datos bancarios:
 - Pasar los valores de Age de float a integer, ya que la edad no puede ser un número decimal.
 - Reemplazo de comas por puntos decimales en columnas numéricas con comas.
@@ -108,12 +110,9 @@ En el dataset de datos bancarios:
 - Pasar a booleanos los valores de las columnas housing y loan, en lugar de usar 1.0 y 0.0.
 - Reformatear la columna date para que tenga un formato dd/mm/yyyy.
 - Latitude y Longitude tienen algunos valores decimales y otros string, por lo que se convierten a float ambas columnas.
+- Agrupar Latitud y Longitud en una columna de Coordinates.
 - Categorizar la columna Days_Since_Last_Contact en "Contacted" y "Not contacted" dependiendo si el valor es menor de 999.
 - Categorizar la columna Call_Duration en "Very short", "Short", "Medium", "Long" y "Very long" dependiendo del valor.
-
-
-
-
 
 
 
@@ -154,7 +153,14 @@ En el dataset de datos bancarios:
 - Fechas nulas → reemplazar por la media de la columna
 
 
-#
+### 2.5 Eliminación de duplicados
+
+
+
+
+
+
+
 -----------------------------------------------------------------
 TODO
 -----------------------------------------------------------------
