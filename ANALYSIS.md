@@ -102,18 +102,18 @@ La corrección del tipado de los datos además de crear tablas a partir de las d
 En el dataset de clientes:
 
 - Reformatear la columna date para que tenga un formato dd/mm/yyyy. Y mantener el formato con la fecha del dataset de datos bancarios.
+- Hacer una columna categorica Frequency a partir de las visitas mensuales de cada cliente.
 
 En el dataset de datos bancarios:
-- Pasar los valores de Age de float a integer, ya que la edad no puede ser un número decimal.
+- Pasar los valores de Age de string a integer.
 - Reemplazo de comas por puntos decimales en columnas numéricas con comas.
-- Eliminación de columnas que no aportan valor para el análisis, como default.
-- Pasar a booleanos los valores de las columnas housing y loan, en lugar de usar 1.0 y 0.0.
+- A primera vista, parece que Credit_Default solo tenga valores 0.0 o nulos, por lo que se hace una busqueda de valores distintos de 0.0 y se comprueba que si hay valores 1.0, por lo que no se descarta la columna.
+- Pasar a booleanos los valores de las columnas Credit_Default, Mortgage_Loan, y Personal_Loan, en lugar de usar 1.0 y 0.0.
 - Reformatear la columna date para que tenga un formato dd/mm/yyyy.
 - Latitude y Longitude tienen algunos valores decimales y otros string, por lo que se convierten a float ambas columnas.
-- Agrupar Latitud y Longitud en una columna de Coordinates.
-- Categorizar la columna Days_Since_Last_Contact en "Contacted" y "Not contacted" dependiendo si el valor es menor de 999.
-- Categorizar la columna Call_Duration en "Very short", "Short", "Medium", "Long" y "Very long" dependiendo del valor.
-
+- Agrupar Latitude y Longitude en una columna de Coordinates.
+- Categorizar la columna Days_Since_Last_Contact en una columna booleana Contacted, dependiendo si el valor es menor de 999.
+- Categorizar la columna Call_Duration en "Very short", "Short", "Medium", "Long" y "Very long" dependiendo del valor en una nueva columna llamada Call_Duration_Categ.
 
 
 ### 2.3 Análisis de valores nulos
@@ -146,14 +146,16 @@ En el dataset de datos bancarios:
 
 #### Estrategia para el manejo de los nulos
 
-- Variables categóricas (strings) → reemplazar por "Unknown"
+- Variables categóricas (strings) → reemplazar por "unknown"
 
 - Variables numéricas (floats/ints) → reemplazar por la media de la columna
 
-- Fechas nulas → reemplazar por la media de la columna
+- Fechas → reemplazar por la media de la columna y formatear a dd/mm/yyyy
 
 
 ### 2.5 Eliminación de duplicados
+
+En caso de existir duplicados, se eliminan de ambos datasets. Pero no se han encontrado.
 
 
 
