@@ -105,15 +105,16 @@ En el dataset de clientes:
 - Hacer una columna categorica Frequency a partir de las visitas mensuales de cada cliente.
 
 En el dataset de datos bancarios:
-- Pasar los valores de Age de string a integer.
-- Reemplazo de comas por puntos decimales en columnas numéricas con comas.
+- Pasar los valores de Age a integer.
 - A primera vista, parece que Credit_Default solo tenga valores 0.0 o nulos, por lo que se hace una busqueda de valores distintos de 0.0 y se comprueba que si hay valores 1.0, por lo que no se descarta la columna.
 - Pasar a booleanos los valores de las columnas Credit_Default, Mortgage_Loan, y Personal_Loan, en lugar de usar 1.0 y 0.0.
 - Reformatear la columna date para que tenga un formato dd/mm/yyyy.
 - Latitude y Longitude tienen algunos valores decimales y otros string, por lo que se convierten a float ambas columnas.
-- Agrupar Latitude y Longitude en una columna de Coordinates.
-- Categorizar la columna Days_Since_Last_Contact en una columna booleana Contacted, dependiendo si el valor es menor de 999.
+- Agrupar Latitude y Longitude en una nueva columna Coordinates.
+- Categorizar la columna Days_Since_Last_Contact en una columna booleana Contacted, dependiendo si el valor es menor de 999 o no.
 - Categorizar la columna Call_Duration en "Very short", "Short", "Medium", "Long" y "Very long" dependiendo del valor en una nueva columna llamada Call_Duration_Categ.
+- En el caso de columnas decimales, en Google Sheets aparecen muchos valores a la izquierda de la celda (en principio string), pero al hacer una comprobacion del tipo de dato, se observa que toda la columna es float. 
+
 
 
 ### 2.3 Análisis de valores nulos
@@ -166,10 +167,6 @@ En caso de existir duplicados, se eliminan de ambos datasets. Pero no se han enc
 -----------------------------------------------------------------
 TODO
 -----------------------------------------------------------------
-## 3. Limpieza de datos
-- Identificar y manejar valores nulos (.isnull().sum()).
-- Eliminar duplicados (.duplicated().sum(), .drop_duplicates()).
-- Revisar tipos de datos y convertir si es necesario (.astype()).
 
 ## 4. Análisis estadístico
 - Resumen estadístico (.describe()).
