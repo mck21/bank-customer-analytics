@@ -1,6 +1,6 @@
 # Análisis Exploratorio de Datos - Proyecto Bancario. 
 El código se encuentra en diferentes notebooks, en la carpeta [notebooks](notebooks).
-- [01TransformacionyLimpieza.ipynb](notebooks/01TransformacionyLimpieza.ipynb): Carga inicial + transformación y limpieza de datos
+- [01TransformacionyLimpieza.ipynb](notebooks/01TransformacionYLimpieza.ipynb): Carga inicial + transformación y limpieza de datos
 - [02AnalisisDescriptivo.ipynb](notebooks/02AnalisisDescriptivo.ipynb): Análisis estadístico descriptivo
 - [03Visualizacion.ipynb](notebooks/03Visualizacion.ipynb): Visualizaciones y gráficos
 
