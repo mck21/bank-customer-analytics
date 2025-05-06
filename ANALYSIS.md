@@ -261,17 +261,17 @@ Esta distribución sugiere que la estrategia de contacto se centró principalmen
 #### Correlaciones significativas:
 1. **Correlación negativa fuerte**:
    - Consumer_Confidence_Index y Employment_Variation_Rate: -0.858
-   - Esta fuerte correlación negativa sugiere que cuando la tasa de variación del empleo aumenta, el índice de confianza del consumidor tiende a disminuir.
+   - Esta fuerte correlación negativa sugiere que cuando la tasa de variación del empleo aumenta, el índice de confianza del consumidor tiende a disminuir. Esto indica que la confianza del consumidor no depende únicamente del empleo, lo que puede afectar las decisiones de inversión y la efectividad de las campañas bancarias.
 
 #### Correlaciones moderadas:
 1. **Call_Duration y Campaign_Contacts**: -0.072
-   - Correlación negativa débil que sugiere que las llamadas más largas tienden a tener menos contactos de campaña.
+   - Correlación negativa débil que sugiere que las llamadas más largas tienden a tener menos contactos de campaña. Por lo que las llamadas más largas no son efectivas para generar más contactos de campaña.
 
 2. **Consumer_Price_Index y Employment_Variation_Rate**: 0.124
-   - Correlación positiva débil entre el índice de precios al consumo y la tasa de variación del empleo.
+   - Correlación positiva débil entre el índice de precios al consumo y la tasa de variación del empleo. Cuando el precio de los bienes y servicios aumenta, la demanda de empleo disminuye.
 
 3. **Consumer_Confidence_Index y Campaign_Contacts**: -0.123
-   - Correlación negativa débil que sugiere que cuando el índice de confianza del consumidor es más bajo, hay más contactos de campaña.
+   - Correlación negativa débil que sugiere que las campañas bancarias que se centran en la confianza del consumidor pueden ser más efectivas.
 
 ### 3.4 Análisis de outliers
 
