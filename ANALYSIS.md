@@ -1,5 +1,14 @@
 # Análisis Exploratorio de Datos - Proyecto Bancario. 
-[Ver código en el notebook](notebooks/EDA_bank_customers.ipynb)
+El código se encuentra en diferentes notebooks, en la carpeta [notebooks](notebooks).
+- [01TransformacionyLimpieza.ipynb](notebooks/01TransformacionyLimpieza.ipynb): Carga inicial + transformación y limpieza de datos
+- [02AnalisisDescriptivo.ipynb](notebooks/02AnalisisDescriptivo.ipynb): Análisis estadístico descriptivo
+- [03Visualizacion.ipynb](notebooks/03Visualizacion.ipynb): Visualizaciones y gráficos
+
+## Índice
+1. [Importación de librerías y carga de datos](#1-importación-de-librerías-y-carga-de-datos)
+2. [Transformación y limpieza de los datos](#2-transformación-y-limpieza-de-los-datos) 
+3. [Análisis estadístico descriptivo](#3-análisis-estadístico-descriptivo)
+
 
 ## 1. Importación de librerías y carga de datos
 
@@ -165,7 +174,7 @@ Se agrupan ambos dataframes por Customer_ID.
 
 Exportar en la carpeta de /results como csv.
 
-## 3. Análisis estadístico
+## 3. Análisis estadístico descriptivo
 
 ### 3.1 Análisis de variables numéricas
 

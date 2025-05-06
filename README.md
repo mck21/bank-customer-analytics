@@ -5,14 +5,13 @@ Este proyecto realiza un análisis exploratorio de datos utilizando Python, de d
 ## Estructura del Proyecto
 
 ```
-├── data/                      # Carpeta con los datos originales
+├── data/                      # Carpeta con los datos originales (y requerimientos del proyecto)
 │   ├── customer-details.xlsx  # Datos originales de clientes
 │   └── bank-additional.csv    # Datos bancarios originales
 ├── src/                      # Código fuente Python
 │   └── data/                 # Scripts para procesamiento de datos
 │       └── data_loader.py    # Funciones de carga y análisis básico
 ├── results/                  # Resultados del análisis
-│   ├── customers_clean.csv   # Dataset de clientes procesado
 │   └── bank_clean.csv        # Dataset bancario procesado
 ├── requirements.txt          # Dependencias del proyecto
 ├── README.md                 # Documentación principal
