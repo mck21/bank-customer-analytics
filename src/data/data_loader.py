@@ -23,15 +23,23 @@ def load_bank_data():
         print(f"Error al cargar datos bancarios: {e}")
         return None
 
+def load_clean_data():
+    """
+    Carga los datos limpios de clientes desde el archivo CSV
+    """
+    try:
+        df_customers = pd.read_csv('../results/bank_clean.csv', index_col=0)
+        return df_customers
+    except Exception as e:
+        print(f"Error al cargar datos limpios: {e}")
+        return None
+
+
 def get_basic_info(df):
     """
     Obtiene información básica del DataFrame
     """
     print("\nInformación del DataFrame:")
     print(df.info())
-    print("\nPrimeras 5 filas:")
-    print(df.head())
     print("\nEstadísticas descriptivas:")
     print(df.describe())
-    print("\nValores nulos:")
-    print(df.isnull().sum()) 
