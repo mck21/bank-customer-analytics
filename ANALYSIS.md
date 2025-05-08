@@ -88,7 +88,7 @@ De ahora en adelante, se utilizarán los siguientes nombres de columnas en el an
 ```python
 customer_columns_rename = {
     'Income': 'Income',
-    'Kidhome': 'Number_of_Children',
+    'Kidhome': 'Number_of_Kids',
     'Teenhome': 'Number_of_Teenagers',
     'Dt_Customer': 'Registration_Date',
     'NumWebVisitsMonth': 'Monthly_Web_Visits',
@@ -133,7 +133,7 @@ En el dataset de clientes:
 
 En el dataset de datos bancarios:
 - Pasar los valores de Age a integer.
-- A primera vista, parece que Credit_Default solo tenga valores 0.0 o nulos, por lo que se hace una busqueda de valores distintos de 0.0 y se comprueba que si hay valores 1.0, por lo que no se descarta la columna.
+- A primera vista, parece que Credit_Default solo tenga valores 0.0 o nulos, por lo que se hace una búsqueda de valores distintos de 0.0 y se comprueba que sí hay valores 1.0, por lo que no se descarta la columna.
 - Pasar a booleanos los valores de las columnas Credit_Default, Mortgage_Loan, y Personal_Loan, en lugar de usar 1.0 y 0.0.
 - Reformatear la columna Contacted_Date para que tenga un formato dd/mm/yyyy.
 - Latitude y Longitude tienen algunos valores decimales y otros string, por lo que se convierten a float ambas columnas.
@@ -264,7 +264,7 @@ Exportar el dataframe df_completo en la carpeta de /results como csv.
 - Desconocido: 0.16%.
 
 #### Nivel educativo (Education_Level):
-- Bachillerato: 24.18%.
+- Educación secundaria: 24.18%.
 - Grado universitario: 23.36%.
 - Educación básica 9 años: 16.99%.
 - Curso profesional: 12.00%.
@@ -322,7 +322,7 @@ Esta distribución sugiere que la estrategia de contacto se centró principalmen
    - Consumer_Confidence_Index y Employment_Variation_Rate: -0.858.
    - Esta fuerte correlación negativa sugiere que cuando la tasa de variación del empleo aumenta, el índice de confianza del consumidor tiende a disminuir. Esto indica que la confianza del consumidor no depende únicamente del empleo, lo que puede afectar las decisiones de inversión y la efectividad de las campañas bancarias.
 
-#### Correlaciones moderadas:
+#### Correlaciones débiles:
 1. **Call_Duration y Campaign_Contacts**: -0.072.
    - Correlación negativa débil que sugiere que las llamadas más largas tienden a tener menos contactos de campaña. Por lo que las llamadas más largas no son efectivas para generar más contactos de campaña.
 
@@ -375,10 +375,10 @@ Se detectaron outliers significativos en las siguientes variables:
 ### 3.5 Conclusiones del análisis estadístico
 
 1. **Distribución demográfica**:
-   - La mayoría de los clientes son casados (63.28%), seguido de solteros (28.32%) y divorciados (8.40%).
-   - El rango de edad está concentrado entre 33 y 46 años, con una media de 40.91 años.
-   - Predominan los trabajadores blue-collar (22.5%) y administrativos (26.1%), seguidos por técnicos (18.3%).
-   - La mayoría tiene estudios secundarios (51.2%), mientras que un tercio (31.4%) tiene educación superior o universitaria.
+   - La mayoría de los clientes son casados (62.7%), seguido de solteros (24.9%) y divorciados (12.2%).
+   - El rango de edad está concentrado entre 33 y 46 años, con una media de 40.91 años y una desviación estándar de 10.6 años. La edad mínima es de 18 años y la máxima de 95 años.
+   - Predominan los trabajadores blue-collar (27.5%) y administrativos (22.8%), seguidos por técnicos (15.0%).
+   - El nivel educativo predominante es educación secundaria (24.18%), seguido de grado universitario (23.36%) y educación básica 9 años (16.99%).
 
 2. **Análisis de correlaciones**:
    - Existe una correlación negativa débil (-0.072) entre la duración de llamadas y contactos de campaña, sugiriendo que las llamadas más largas no son efectivas para generar más contactos.
@@ -386,22 +386,22 @@ Se detectaron outliers significativos en las siguientes variables:
    - La correlación negativa débil (-0.123) entre el índice de confianza del consumidor y contactos de campaña sugiere que las campañas enfocadas en la confianza del consumidor pueden ser más efectivas.
 
 3. **Análisis de outliers**:
-   - Call_Duration: 7.44% de casos atípicos, con valores entre 646 y 3,643 segundos.
-   - Campaign_Contacts: 7.77% de outliers, entre 7 y 56 contactos.
-   - Consumer_Price_Index: 29% de valores atípicos, rango de 93.44 a 94.47.
-   - Euribor_3M_Rate: 20.62% de casos atípicos concentrados en 3.62%.
+   - Call_Duration: 7.44% de casos atípicos (1,490 casos), con valores entre 646 y 3,643 segundos.
+   - Campaign_Contacts: 7.77% de outliers (1,556 casos), entre 7 y 56 contactos.
+   - Consumer_Price_Index: 29% de valores atípicos (5,806 casos), rango de 93.44 a 94.47.
+   - Euribor_3M_Rate: 20.62% de casos atípicos (4,127 casos) concentrados en 3.62%.
 
 4. **Comportamiento financiero**:
-   - La gran mayoría (82.37%) no tiene préstamos personales.
-   - Distribución equilibrada en préstamos hipotecarios: 52.4% sí tienen, 47.6% no.
-   - Alta variabilidad en ingresos con una desviación estándar de 25,678€.
-   - Muy baja tasa de morosidad (1.7%).
+   - La mayoría (82.37%) no tiene préstamos personales.
+   - En préstamos hipotecarios: 47.95% tienen préstamo, 49.45% no tienen.
+   - Alta variabilidad en ingresos con una media de 93,071.66€ y desviación estándar de 50,615.70€.
+   - Los ingresos varían entre 5,852€ y 180,791€.
 
 5. **Patrones de contacto**:
-   - Predominan las llamadas cortas (87.69%), con duración media de 258 segundos.
-   - Promedio bajo de contactos por campaña (2.91 por cliente).
-   - El 84.3% de contactos se realizan por teléfono móvil.
-   - Las llamadas más largas tienden a resultar en menos contactos de campaña.
+   - Predominan las llamadas cortas (87.69% entre muy cortas y cortas).
+   - Duración media de llamadas de 260.71 segundos.
+   - Media de 2.91 contactos por campaña por cliente.
+   - 65.19% de contactos por teléfono fijo y 34.81% por móvil.
 
 <br/>
 <p align="center">
@@ -521,7 +521,6 @@ Estas conclusiones proporcionan una base sólida para optimizar estrategias come
    - Priorizar el uso del teléfono fijo (65.19% de efectividad) mientras se desarrolla la estrategia móvil.
    - Mantener llamadas cortas, ya que el 87.69% de las llamadas efectivas son breves.
    - Evitar concentrar campañas masivas en un solo día como la del 17/06/2017.
-   - Aprovechar el uso consistente de canales digitales (25% en cada categoría).
 
 2. **Segmentación y targeting**:
    - Enfocar esfuerzos en el perfil mayoritario: personas casadas (63.28%), 35-45 años, con educación media/superior.
