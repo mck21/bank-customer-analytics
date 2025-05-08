@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/informehead.png?raw=true" alt="Header Image" />
+</p>
+
 # Análisis Exploratorio de Datos - Proyecto Bancario. 
 El código se encuentra en diferentes notebooks, en la carpeta [notebooks](notebooks).
 - [01TransformacionyLimpieza.ipynb](notebooks/01TransformacionYLimpieza.ipynb): Carga inicial + transformación y limpieza de datos
@@ -12,7 +16,11 @@ El código se encuentra en diferentes notebooks, en la carpeta [notebooks](noteb
 5. [Conclusiones](#5-conclusiones)
 6. [Recomendaciones](#6-recomendaciones)
 
-
+<br/>
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/cargadedatos.png?raw=true"/>
+</p>
 
 ## 1. Importación de librerías y carga de datos
 
@@ -61,6 +69,11 @@ El parámetro index_col=0 indica que la primera columna del CSV se utilizará co
   - latitude (latitud)
   - longitude (longitud)
   - id_ (identificador)
+
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/transformacionylimpieza.png?raw=true" />
+</p>
 
 ## 2. Transformación y limpieza de los datos
 
@@ -178,6 +191,12 @@ Se agrupan ambos dataframes por Customer_ID en un nuevo dataframe: df_completo.
 ### 2.7 Exportación del dataset limpio
 
 Exportar el dataframe df_completo en la carpeta de /results como csv.
+
+
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/analisisestadisticodescriptivo.png?raw=true" alt="Header Image" />
+</p>
 
 ## 3. Análisis estadístico descriptivo
 
@@ -384,6 +403,10 @@ Se detectaron outliers significativos en las siguientes variables:
    - El 84.3% de contactos se realizan por teléfono móvil.
    - Las llamadas más largas tienden a resultar en menos contactos de campaña.
 
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/visualizacion.png?raw=true"/>
+</p>
 
 ## 4. Visualización de datos
 
@@ -437,6 +460,11 @@ n. Tasa de Morosidad
 o. Mapa de Calor de Correlaciones entre Variables Numéricas  
 - Se observa alta correlación entre edad y grupo de edad (0.99) (normal, ya que una columna deriva de la otra) y una fuerte correlación negativa entre empleo y confianza del consumidor.
 
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/conclusiones.png?raw=true"/>
+</p>
+
 ## 5. Conclusiones
 
 - El perfil medio del cliente es una persona casada (63.28%), en edad laboral madura (35-45 años), con educación secundaria o universitaria (47.54%), y empleada principalmente en sectores manuales (27.48%) o administrativos (22.77%).
@@ -461,6 +489,10 @@ o. Mapa de Calor de Correlaciones entre Variables Numéricas
 
 Estas conclusiones proporcionan una base sólida para optimizar estrategias comerciales, gestión de riesgos y segmentación de clientes.
 
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/recomendaciones.png?raw=true"/>
+</p>
 ## 6. Recomendaciones
 
 1. **Optimización de campañas**:
