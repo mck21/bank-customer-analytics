@@ -493,6 +493,7 @@ Estas conclusiones proporcionan una base sólida para optimizar estrategias come
 <p align="center">
   <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/recomendaciones.png?raw=true"/>
 </p>
+
 ## 6. Recomendaciones
 
 1. **Optimización de campañas**:
