@@ -7,14 +7,18 @@ Este proyecto realiza un análisis exploratorio de datos utilizando Python, de d
 ├── data/                      # Carpeta con los datos originales (y requerimientos del proyecto)
 │   ├── customer-details.xlsx  # Datos originales de clientes
 │   └── bank-additional.csv    # Datos bancarios originales
-├── src/                      # Código fuente Python
-│   └── data/                 # Scripts para procesamiento de datos
+├── notebooks/                 # Jupyter notebooks con el análisis
+│   ├── 01TransformacionYLimpieza.ipynb  # Limpieza y transformación inicial
+│   ├── 02AnalisisDescriptivo.ipynb      # Análisis estadístico descriptivo
+│   └── 03Visualizacion.ipynb            # Visualizaciones y gráficos
+├── src/                      
+│   └── data/                 
 │       └── data_loader.py    # Funciones de carga y análisis básico
 ├── results/                  # Resultados del análisis
 │   └── bank_clean.csv        # Dataset bancario procesado
 ├── requirements.txt          # Dependencias del proyecto
 ├── README.md                 # Documentación principal
-└── ANALYSIS.md              # Metodología y resultados del análisis
+└── ANALYSIS.md               # Metodología y resultados del análisis
 ```
 
 ## Datos
