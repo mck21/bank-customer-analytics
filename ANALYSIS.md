@@ -412,6 +412,27 @@ Se detectaron outliers significativos en las siguientes variables:
 
 Para la visualización de datos se utilizaron diferentes tipos de gráficos mediante las librerías seaborn y matplotlib, incluyendo gráficos de barras para relaciones entre variables categóricas y numéricas, gráficos circulares para proporciones, gráficos de dispersión y mapas de calor para correlaciones entre variables.
 
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/output01.png?raw=true"/>
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/output02.png?raw=true"/>
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/output03.png?raw=true"/>
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/output04.png?raw=true"/>
+</p>
+<br/>
+<p align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/output05.png?raw=true"/>
+</p>
+
 ## 4.1 Interpretaciones de los gráficos
 
 a. Distribución de Estado Civil  
