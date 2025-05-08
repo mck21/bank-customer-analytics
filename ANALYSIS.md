@@ -395,19 +395,19 @@ a. Distribución de Estado Civil
 - La mayoría de los clientes están casados, seguidos por solteros y divorciados; el estado "unknown" es despreciable.
 
 b. Distribución de Edad  
-- La edad se concentra entre 35 y 45 años, con un pico alrededor de los 40 años.
+- La edad se concentra entre 35 y 45 años, con un pico alrededor de los 40 años (por la media asignada a los nulos), pero la tendencia es ascendente hasta los 30-35 años (en ese rango se mantiene constante) y descendente hasta los 60 años, habiendo un pico real entorno a los 30-35 años.
 
 c. Nivel Educativo  
-- Los niveles más frecuentes son "high-school", "university-degree" y "basic-9y"; los niveles más bajos y "unknown" son minoritarios.
+- Los niveles más frecuentes son "high-school", "university-degree" y "basic-9y"; los niveles más bajos y "unknown" son minoritarios, e "illiterate" es despreciable.
 
 d. Distribución de Tipo de Empleo  
 - Predominan los empleos "blue-collar", "admin." y "technician", seguidos de "services".
 
 e. Ingresos por Nivel Educativo  
-- Los ingresos son similares para niveles medios y altos, salvo "illiterate" y "unknown" que se desvían.
+- Los ingresos son similares para niveles medios y altos, salvo "illiterate" y "unknown" que son minoritarios en cuanto a la media.
 
 f. Ingresos por Tipo de Empleo  
-- Los ingresos más altos corresponden a "unknown", seguido de "technician" y "admin."; los más bajos, a "student" y "entrepreneur".
+- Los ingresos más altos corresponden a "unknown", seguido de "technician" y "admin.", los más bajos a "student" y "entrepreneur".
 
 g. Préstamos Personales (True) por Nivel Educativo  
 - Los niveles con más préstamos personales son "high-school" y "university-degree".
@@ -416,16 +416,17 @@ h. Préstamos Hipotecarios (True) por Estado Civil
 - La mayoría de las hipotecas son solicitadas por personas casadas.
 
 i. Ingresos Promedio por Estado Civil  
-- Los ingresos son similares entre casados, solteros y divorciados; "unknown" presenta gran varianza.
+- Los ingresos son similares entre casados, solteros y divorciados, estando estos ligeramente por encima; y "unknown" presenta gran varianza.
 
 j. Distribución de Ingresos por Grupos de Edad  
-- Los ingresos crecen hasta los 50 años y luego se estabilizan, con mayor dispersión en edades avanzadas.
+- La distribución de ingresos es similar entre todos los grupos de edad, con medianas constantes alrededor de $90000, sugiriendo que la edad no influye significativamente en el nivel de ingresos en esta población. 
+Apreciamos un outlier de un estudiante de 19 años con 170000 de ingresos, que no es representativo de la población general.
 
 k. Proporción de Llamadas por Tipo de Contacto  
 - El canal más usado es el teléfono fijo (65.2 %), seguido del celular (34.8 %).
 
 l. Relación entre Duración de Llamada y Número de Contactos  
-- Existe una ligera relación negativa entre duración de llamadas y número de contactos.
+- Existe una ligera relación negativa entre duración de llamadas y número de contactos. Demostrando que las llamadas más largas no son efectivas para generar más contactos.
 
 m. Distribución de Préstamos Personales  
 - El 82.4 % no tiene préstamos personales, el 15 % sí, y el 2.6 % está en "Desconocido".
@@ -434,7 +435,7 @@ n. Tasa de Morosidad
 - El 29.3 % de los clientes presenta impagos, mientras que el 70.7 % no.
 
 o. Mapa de Calor de Correlaciones entre Variables Numéricas  
-- Se observa alta correlación entre edad y grupo de edad (0.99) y una fuerte correlación negativa entre empleo y confianza del consumidor.
+- Se observa alta correlación entre edad y grupo de edad (0.99) (normal, ya que una columna deriva de la otra) y una fuerte correlación negativa entre empleo y confianza del consumidor.
 
 ## 5. Conclusiones
 
