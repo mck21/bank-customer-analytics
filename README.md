@@ -1,10 +1,19 @@
-<h1 align="center">
+<p align="center">
   <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/head.png?raw=true" alt="Header Image" />
-</h1>
+</p>
 
 # Proyecto de Análisis Exploratorio de Datos (EDA)
 
 Este proyecto realiza un análisis exploratorio de datos utilizando Python, de datos de clientes bancarios.
+
+<div align="center">
+  <img src="https://img.shields.io/badge/python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+  <img src="https://img.shields.io/badge/numpy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy">
+  <img src="https://img.shields.io/badge/matplotlib-11557C?style=for-the-badge&logo=matplotlib&logoColor=white" alt="Matplotlib">
+  <img src="https://img.shields.io/badge/seaborn-4C8CBF?style=for-the-badge&logo=seaborn&logoColor=white" alt="Seaborn">
+</div>
+
 ## Estructura del Proyecto
 
 ```
@@ -22,7 +31,7 @@ Este proyecto realiza un análisis exploratorio de datos utilizando Python, de d
 │   └── bank_clean.csv        # Dataset bancario procesado
 ├── requirements.txt          # Dependencias del proyecto
 ├── README.md                 # Documentación principal
-└── ANALYSIS.md               # Metodología y resultados del análisis
+└── ANALYSIS.md               # Informe con la metodología y los resultados del análisis
 ```
 
 ## Datos
