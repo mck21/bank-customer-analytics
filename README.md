@@ -1,3 +1,7 @@
+<h1 align="center">
+  <img src="https://github.com/mck21/bank-customer-analytics/blob/main/img/head.png?raw=true" alt="Header Image" />
+</h1>
+
 # Proyecto de Análisis Exploratorio de Datos (EDA)
 
 Este proyecto realiza un análisis exploratorio de datos utilizando Python, de datos de clientes bancarios.
