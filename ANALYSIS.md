@@ -8,6 +8,10 @@ El código se encuentra en diferentes notebooks, en la carpeta [notebooks](noteb
 1. [Importación de librerías y carga de datos](#1-importación-de-librerías-y-carga-de-datos)
 2. [Transformación y limpieza de los datos](#2-transformación-y-limpieza-de-los-datos) 
 3. [Análisis estadístico descriptivo](#3-análisis-estadístico-descriptivo)
+4. [Visualización de datos](#4-visualización-de-datos)
+5. [Conclusiones](#5-conclusiones)
+6. [Recomendaciones](#6-recomendaciones)
+
 
 
 ## 1. Importación de librerías y carga de datos
@@ -383,62 +387,99 @@ Se detectaron outliers significativos en las siguientes variables:
 
 ## 4. Visualización de datos
 
-Se han creado gráficos para visualizar los datos utilizando gráficos de barras (barplot), gráficos circulares (pie) y gráficos de dispersión (scatter) y gráficos de mapa de calor (heatmap) mediante las librerías 
-seaborn y matplotlib. Los gráficos de barras se usaron principalmente para mostrar relaciones entre variables categóricas y numéricas como ingresos por nivel educativo y tipo de empleo. Los gráficos circulares se 
-emplearon para mostrar proporciones como la distribución de préstamos hipotecarios por estado civil. 
+Para la visualización de datos se utilizaron diferentes tipos de gráficos mediante las librerías seaborn y matplotlib, incluyendo gráficos de barras para relaciones entre variables categóricas y numéricas, gráficos circulares para proporciones, gráficos de dispersión y mapas de calor para correlaciones entre variables.
 
 ## 4.1 Interpretaciones de los gráficos
 
-## 1. Distribución de Estado Civil  
-- La mayoría de los clientes están casados, seguidos por solteros y divorciados; el estado “unknown” es despreciable.
+a. Distribución de Estado Civil  
+- La mayoría de los clientes están casados, seguidos por solteros y divorciados; el estado "unknown" es despreciable.
 
-## 2. Distribución de Edad  
+b. Distribución de Edad  
 - La edad se concentra entre 35 y 45 años, con un pico alrededor de los 40 años.
 
-## 3. Nivel Educativo  
-- Los niveles más frecuentes son “high-school”, “university-degree” y “basic-9y”; los niveles más bajos y “unknown” son minoritarios.
+c. Nivel Educativo  
+- Los niveles más frecuentes son "high-school", "university-degree" y "basic-9y"; los niveles más bajos y "unknown" son minoritarios.
 
-## 4. Distribución de Tipo de Empleo  
-- Predominan los empleos “blue-collar”, “admin.” y “technician”, seguidos de “services”.
+d. Distribución de Tipo de Empleo  
+- Predominan los empleos "blue-collar", "admin." y "technician", seguidos de "services".
 
-## 5. Ingresos por Nivel Educativo  
-- Los ingresos son similares para niveles medios y altos, salvo “illiterate” y “unknown” que se desvían.
+e. Ingresos por Nivel Educativo  
+- Los ingresos son similares para niveles medios y altos, salvo "illiterate" y "unknown" que se desvían.
 
-## 6. Ingresos por Tipo de Empleo  
-- Los ingresos más altos corresponden a “unknown”, seguido de “technician” y “admin.”; los más bajos, a “student” y “entrepreneur”.
+f. Ingresos por Tipo de Empleo  
+- Los ingresos más altos corresponden a "unknown", seguido de "technician" y "admin."; los más bajos, a "student" y "entrepreneur".
 
-## 7. Préstamos Personales (True) por Nivel Educativo  
-- Los niveles con más préstamos personales son “high-school” y “university-degree”.
+g. Préstamos Personales (True) por Nivel Educativo  
+- Los niveles con más préstamos personales son "high-school" y "university-degree".
 
-## 8. Préstamos Hipotecarios (True) por Estado Civil  
+h. Préstamos Hipotecarios (True) por Estado Civil  
 - La mayoría de las hipotecas son solicitadas por personas casadas.
 
-## 9. Ingresos Promedio por Estado Civil  
-- Los ingresos son similares entre casados, solteros y divorciados; “unknown” presenta gran varianza.
+i. Ingresos Promedio por Estado Civil  
+- Los ingresos son similares entre casados, solteros y divorciados; "unknown" presenta gran varianza.
 
-## 10. Distribución de Ingresos por Grupos de Edad  
+j. Distribución de Ingresos por Grupos de Edad  
 - Los ingresos crecen hasta los 50 años y luego se estabilizan, con mayor dispersión en edades avanzadas.
 
-## 11. Proporción de Llamadas por Tipo de Contacto  
-- El canal más usado es el teléfono fijo (65.2 %), seguido del celular (34.8 %).
+k. Proporción de Llamadas por Tipo de Contacto  
+- El canal más usado es el teléfono fijo (65.2 %), seguido del celular (34.8 %).
 
-## 12. Relación entre Duración de Llamada y Número de Contactos  
+l. Relación entre Duración de Llamada y Número de Contactos  
 - Existe una ligera relación negativa entre duración de llamadas y número de contactos.
 
-## 13. Distribución de Préstamos Personales  
-- El 82.4 % no tiene préstamos personales, el 15 % sí, y el 2.6 % está en “Desconocido”.
+m. Distribución de Préstamos Personales  
+- El 82.4 % no tiene préstamos personales, el 15 % sí, y el 2.6 % está en "Desconocido".
 
-## 14. Tasa de Morosidad  
-- El 29.3 % de los clientes presenta impagos, mientras que el 70.7 % no.
+n. Tasa de Morosidad  
+- El 29.3 % de los clientes presenta impagos, mientras que el 70.7 % no.
 
-## 15. Mapa de Calor de Correlaciones entre Variables Numéricas  
+o. Mapa de Calor de Correlaciones entre Variables Numéricas  
 - Se observa alta correlación entre edad y grupo de edad (0.99) y una fuerte correlación negativa entre empleo y confianza del consumidor.
 
 ## 5. Conclusiones
 
-El perfil medio del cliente es una persona casada, en edad laboral madura, con educación secundaria o universitaria, y empleada en sectores manuales o administrativos. A pesar de una distribución homogénea de ingresos, se detectan desviaciones por categoría laboral y nivel educativo extremo. La mayoría de los clientes no tiene préstamos personales ni hipotecarios, pero entre quienes los tienen, destacan los de educación media/alta y estado civil casado. 
+- El perfil medio del cliente es una persona casada (63.28%), en edad laboral madura (35-45 años), con educación secundaria o universitaria (47.54%), y empleada principalmente en sectores manuales (27.48%) o administrativos (22.77%).
 
-El uso del canal telefónico fijo sigue siendo alto. Se observa una eficiencia operativa decreciente en llamadas largas. Las tasas de morosidad son elevadas (29.3 %), lo cual representa un foco de riesgo. La baja multicolinealidad entre variables es positiva para la modelización, y algunas correlaciones específicas (edad-grupo de edad, empleo-confianza) podrían ser claves predictivas. Estas conclusiones orientan tanto estrategias comerciales como el diseño de modelos de riesgo y segmentación.
+- Los ingresos muestran una distribución homogénea entre estados civiles, pero con desviaciones significativas por categoría laboral, siendo más altos en perfiles técnicos y administrativos, y más bajos en estudiantes y emprendedores.
+
+- La mayoría de clientes no tiene préstamos: solo 15.03% tiene préstamos personales y 47.95% hipotecarios. Entre quienes los tienen, destacan perfiles con educación media/alta y estado civil casado.
+
+- El canal telefónico fijo domina con 65.19% de uso, aunque el móvil (34.81%) muestra una tendencia creciente.
+
+- Las llamadas tienden a ser cortas (87.69% entre muy cortas y cortas), observándose menor efectividad en llamadas largas.
+
+- Tasa de morosidad preocupante del 29.3%, especialmente considerando que la mayoría de clientes no tiene préstamos activos.
+
+- La frecuencia de visitas web muestra una distribución equilibrada entre las categorías (aprox. 25% cada una), sugiriendo un uso consistente de canales digitales.
+
+- La campaña masiva del 17/06/2017 alcanzó al 61.95% de clientes, evidenciando una estrategia de contacto concentrada.
+
+- La fuerte correlación negativa entre empleo y confianza del consumidor (-0.858) sugiere que a mayor tasa de empleo, menor es la confianza del consumidor, lo que podría indicar precaución o pesimismo en períodos de alta empleabilidad. Este hallazgo es relevante para anticipar comportamientos financieros de los clientes.
+
+- Los outliers significativos en duración de llamadas (7.44%) y contactos de campaña (7.77%) sugieren casos que requieren atención especial.
+
+Estas conclusiones proporcionan una base sólida para optimizar estrategias comerciales, gestión de riesgos y segmentación de clientes.
+
+## 6. Recomendaciones
+
+1. **Optimización de campañas**:
+   - Priorizar el uso del teléfono fijo (65.19% de efectividad) mientras se desarrolla la estrategia móvil.
+   - Mantener llamadas cortas, ya que el 87.69% de las llamadas efectivas son breves.
+   - Evitar concentrar campañas masivas en un solo día como la del 17/06/2017.
+   - Aprovechar el uso consistente de canales digitales (25% en cada categoría).
+
+2. **Segmentación y targeting**:
+   - Enfocar esfuerzos en el perfil mayoritario: personas casadas (63.28%), 35-45 años, con educación media/superior.
+   - Adaptar ofertas según sector laboral, considerando mayores ingresos en perfiles técnicos y administrativos.
+   - Desarrollar productos específicos para el 85% de clientes sin préstamos personales.
+
+3. **Gestión de riesgos**:
+   - Implementar sistema de alerta temprana para la alta tasa de morosidad (29.3%).
+   - Monitorear especialmente clientes sin préstamos activos que muestran señales de riesgo.
+   - Considerar la correlación negativa empleo-confianza del consumidor para anticipar comportamientos.
+
+
+
 
 
 
