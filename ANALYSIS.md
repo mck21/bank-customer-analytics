@@ -375,8 +375,8 @@ Se detectaron outliers significativos en las siguientes variables:
 ### 3.5 Conclusiones del análisis estadístico
 
 1. **Distribución demográfica**:
-   - La mayoría de los clientes son casados (62.7%), seguido de solteros (24.9%) y divorciados (12.2%).
-   - El rango de edad está concentrado entre 33 y 46 años, con una media de 40.91 años y una desviación estándar de 10.6 años. La edad mínima es de 18 años y la máxima de 95 años.
+   - La mayoría de los clientes son casados (63.28%), seguido de solteros (24.70%) y divorciados (11.85%).
+   - El rango de edad está concentrado entre 33 y 46 años, con una media de 40.91 años y una desviación estándar de 10.6 años. La edad mínima es de 19 años y la máxima de 61 años.
    - Predominan los trabajadores blue-collar (27.5%) y administrativos (22.8%), seguidos por técnicos (15.0%).
    - El nivel educativo predominante es educación secundaria (24.18%), seguido de grado universitario (23.36%) y educación básica 9 años (16.99%).
 
